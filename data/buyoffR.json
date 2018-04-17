@@ -1,0 +1,22 @@
+[
+    {
+        "mq": "¥",
+        "lw": "联想Watch 9",
+        "o1": "129",
+        "lg": "联想S5 钢化玻璃膜",
+        "o2": "19",
+        "lh": "联想DP-20双单元Hi-Fi耳机",
+        "o3": "39",
+        "ls": "联想S5 双料保护壳",
+        "mx30": "Motorola MX30 全数字Type-c 耳机",
+        "o4": "2499",
+        "l20": "JBL L20R 耳机",
+        "o5": "99",
+        "img1": "../images/watch1.jpg",
+        "img2": "../images/mo1.png",
+        "img3": "../images/ear2.png",
+        "img4": "../images/mo2.jpg",
+        "img5": "../images/ear3.png",
+        "img6": "../images/ear1.png"
+    }
+]

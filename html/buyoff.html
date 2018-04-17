@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>商品列表</title>
+        <link rel="stylesheet" href="../css/buyoff.css">
+        <script src = "../js/jquery-1.10.1.min.js"></script>
+        <script src = "../js/jquery.cookie.js"></script>
+        <script src = "../js/require.js" defer async="true" data-main = "../js/main"></script>
+
+    </head>
+    <body style = "background-color: #f1f1f1">
+        <!-- 顶部栏 -->
+        <div class = "global-top">
+            <div class="wrapper clearfix">
+                <div class="top-links clearfix">
+                    <a class="first" href="#">Moto官网<span class="line">|</span></a>
+                    <a href="#" target="_blank">购买渠道<span class="line">|</span></a>
+                    <a href="#" target="_blank">服务与支持<span class="line">|</span></a>
+                    <a href="#" target="_blank">开发者平台<span class="line">|</span></a>
+                    <a href="#" target="_blank">应用商店<span class="line">|</span></a>
+                    <a href="#" target="_blank" class="last">
+                        <img src="../images/lenovo-mall-logo.png" alt="" width="16" height="17">联想官网
+                    </a>
+                </div>
+                <!-- 登陆 -->
+                <div id="login-center-box" class="login-box clearfix" style="">
+                    <a index="clickRegister" href="#">注册</a>
+                    <a index="clickRegister" href="#">登录</a>
+                    <a href="#">Z码通道</a>
+                </div>
+            </div>
+        </div>
+        <!-- 再一栏 -->
+        <div class = "global-header">
+            <div class="svgImage">
+                <img src="../images/lenovo-logo-vertical.png" width="34" height="102">
+            </div>
+
+            <div class="wrapper clearfix">
+                <a href="#" class="logo" title="moto官网">
+                    <img src="../images/logoG.png" width="40" height="40">
+                </a>
+
+                <ul class="nav-wrap clearfix store-common-nav">
+                    <li class="item" data-layer="m-phone">
+                        <a href="#">手机</a>
+                    <li class="item" data-layer="m-mods">
+                        <a href="#">Moto Mods</a>
+                    </li>
+                    <li class="item" data-layer="m-pj">
+                        <a href="#">精品配件</a>
+                    </li>
+                    <li>
+                        <a href="http://club.lenovo.com.cn/moto" target="_blank">社区</a>
+                    </li>
+                </ul>
+                <ul class="user-op-bar user-op-bar1 clearfix">
+                    <li>
+                        <a href="shopcar.html" class = "car">
+                            购物车
+                            <i id="i_cart_total">0</i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 下拉菜单 -->
+        <div class = "sub-product-nav">
+            <div class="wrapper">
+            <!-- 手机 -->
+                <div class="moto-sub-nav clearfix" id="m-phone">
+                    <ul class="m-product-list clearfix" id="topmobile"></ul>
+                </div>
+                <!-- Moto Mods -->
+                <div class="moto-sub-nav clearfix" id="m-mods" style="display: block;">
+                    <ul class="m-product-list clearfix" id="topmotomods"></ul>
+                </div>
+                <!-- 配件 -->
+                <div class="moto-sub-nav clearfix" id="m-pj" style="display: none;">
+                    <ul class="m-product-list clearfix" id="topparts"></ul>
+                </div>
+            </div>
+        </div>
+        <!-- baner -->
+        <div class = "lb">
+            <ul class = "lbt">
+                <li class = "flt"><a href=""><img src="../images/baner_1.jpg" alt=""></a></li>
+                <li><a href=""><img src="../images/baner_2.jpg" alt=""></a></li>
+                <li><a href=""><img src="../images/baner_3.jpg" alt=""></a></li>
+                <li><a href=""><img src="../images/baner_4.jpg" alt=""></a></li>
+            </ul>
+            <ol class = "lbb">
+                <li class = "flb"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+            <div id = "zuo"><</div>
+            <div id = "you">></div>
+        </div>
+        <div class = "wrapper">
+            <!-- 明星单品 -->
+            <div class="mall-section">
+                <div class="mall-section-head">
+                    <h3>明星单品</h3>
+                </div>
+                <div class="moto-star-pro clearfix" id="star">
+                    <div class="star-mod-l">
+                        <a index="display" href="#" target="_blank">
+                            <img src="../images/aphone.jpg" alt="" width="600" height="444">
+                        </a>
+                    </div>
+                    <ul class="star-mod-r clearfix">
+                        <li>
+                            <a index="product1" href="#" target="_blank">
+                                <span class="i-mark i-mark-xp">新品 </span>
+                                <span class="line"></span>
+                                <img src="../images/aphone1.jpg" alt="" width="301" height="222">
+                                <div class="discript">
+                                    <h3 class="tit">联想K5 精灵蓝</h3>
+                                    <div class="price">
+                                        <span>¥899</span>
+                                    </div>
+                                    <p class="txt">炫彩玻璃·美出新高度<br>1300W后置双摄<br>全面屏<br>双面2.5D玻璃</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a index="product2" href="#" target="_blank">
+                                <span class="i-mark i-mark-xp">新品 </span>
+                                <span class="line"></span>
+                                <img src="../images/aphone2.jpg" alt="" width="301" height="222">
+                                <div class="discript">
+                                    <h3 class="tit">联想Watch 9</h3>
+                                    <div class="price">
+                                        <span>¥129</span>
+                                    </div>
+                                    <p class="txt">智能芯片<br>游泳防水<br>手势拍照<br></p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- moto手机 -->
+             <div class="mall-section-head">
+                <h3>Moto手机</h3>
+                <a index="more" class="more" target="_blank" href="/store/list/31.html">更多 &gt;</a>
+            </div>
+            <div class = "mods-top">
+                <ul class = "bxslider" id = "recomslider3"></ul>
+            </div>
+            <div class = "moto-mod-wrap" id = "modMoto"></div>
+
+            <div class="mall-section-head">
+                <h3>Moto手机</h3>
+                <a index="more" class="more" target="_blank" href="/store/list/31.html">更多 &gt;</a>
+            </div>
+            <div class = "mods-top">
+                <ul class = "bxslider" id = "recomslider3"></ul>
+            </div>
+            <div class = "moto-mod-wrap" id = "modMoto"></div>
+
+            <div class="mall-section-head">
+                <h3>Moto手机</h3>
+                <a index="more" class="more" target="_blank" href="/store/list/31.html">更多 &gt;</a>
+            </div>
+            <div class = "mods-top">
+                <ul class = "bxslider" id = "recomslider3"></ul>
+            </div>
+            <div class = "moto-mod-wrap" id = "modMoto"></div>
+
+            <div class="mall-section-head">
+                <h3>Moto手机</h3>
+                <a index="more" class="more" target="_blank" href="/store/list/31.html">更多 &gt;</a>
+            </div>
+            <div class = "mods-top">
+                <ul class = "bxslider" id = "recomslider3"></ul>
+            </div>
+            <div class = "moto-mod-wrap" id = "modMoto"></div>
+
+            <div class="mall-section-head">
+                <h3>Moto手机</h3>
+                <a index="more" class="more" target="_blank" href="/store/list/31.html">更多 &gt;</a>
+            </div>
+            <div class = "mods-top">
+                <ul class = "bxslider" id = "recomslider3"></ul>
+            </div>
+            <div class = "moto-mod-wrap" id = "modMoto"></div>
+
+            <div class="mall-section-head">
+                <h3>Moto手机</h3>
+                <a index="more" class="more" target="_blank" href="/store/list/31.html">更多 &gt;</a>
+            </div>
+            <div class = "mods-top">
+                <ul class = "bxslider" id = "recomslider3"></ul>
+            </div>
+            <div class = "moto-mod-wrap" id = "modMoto"></div>
+
+        </div>
+        <!-- 尾部 foot -->
+        <div class = "global-footer">
+            <div class = "col-box">
+                <ul class = "promise-box clearfix">
+                    <li class = "first">
+                        <a href="#">
+                            <img src="../images/myf.png" alt="">
+                            <p>满58元免运费</p>
+                        </a>
+                    </li>
+                    <li class = "two">
+                        <a href="#">
+                            <img src="../images/seven.png" alt="">
+                            <p>7天无理由退货</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../images/fif.png" alt="">
+                            <p>15天免费换货</p>
+                        </a>
+                    </li>
+                    <li class = "last">
+                        <a href="#">
+                            <img src="../images/mfw.png" alt="">
+                            <p>700余家售后网点</p>
+                        </a>
+                    </li>
+                </ul>
+                <div class = "wrapper col-warp">
+                    <div class="btm-logo">
+                        <img src="http://image.motorola.com.cn/upload/image/20170620/1497926261742031053.png" alt="" width="40" height="40">
+                    </div>
+                    <dl class="col-links col1">
+                        <dt>关于我们</dt>
+                        <dd><a href="#">发展经历</a></dd>
+                    </dl>
+                    <dl class="col-links col2">
+                        <dt>媒体中心</dt>
+                        <dd><a href="#">官方视频</a></dd>
+                        <dd><a href="#">媒体报道</a></dd>
+                        <dd><a href="#">产品美图</a></dd>
+                    </dl>
+                    <dl class="col-links col3">
+                        <dt>购买渠道</dt>
+                        <dd><a href="#">体验中心</a></dd>
+                        <dd><a href="#">线上销售平台</a></dd>
+                        <dd><a href="#">线下零售店</a></dd>
+                    </dl>
+                    <dl class="col-links col4">
+                        <dt>服务与支持</dt>
+                        <dd><a href="#">售后政策</a></dd>
+                        <dd><a href="#">购买指南</a></dd>
+                        <dd><a href="#">售后网点</a></dd>
+                    </dl>
+                    <dl class="col-links col5">
+                        <dt>关注我们</dt>
+                        <dd><a href="#" target="_blank">官方微博</a></dd>
+                        <dd class="weixin">
+                            <a href="#">官方微信</a>
+                        </dd>
+                        <dd><a href="#" target="_blank">官方社区</a></dd>
+                    </dl>
+
+                </div>
+            </div>
+            <div class = "copyright">
+                <div class="wrapper clearfix">
+                    <div class="copyright-infor">
+                        <div class="language">
+                            中文
+                            <span>|</span>
+                            <a href="#" target="_blank">更改</a>
+                        </div>
+                        <p>
+                            <br>Copyright © 2018 Motorola Mobility LLC. 版权所有&nbsp;&nbsp;京ICP备09071891号-6&nbsp;&nbsp;摩托罗拉移动技术（中国）有限公司北京分公司&nbsp;&nbsp;
+                            <span>|</span>&nbsp;&nbsp;
+                            <a href="#/" style="color:#747F80;" target="_blank">网站隐私政策</a>&nbsp;&nbsp;
+                            <span>|</span>&nbsp;&nbsp;
+                            <a href="#" style="color:#747F80;" target="_blank">产品隐私政策</a>
+                        </p>
+                    </div>
+                    <div class="col-contact">
+                        <span class="tel-num">400-889-9090</span>
+                        <p class="work-time">周一至周日 9:00-21:00</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+</html>
